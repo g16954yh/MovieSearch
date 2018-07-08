@@ -36,8 +36,8 @@ public class ReadText {
 		return titleList;
 	}
 	
-	public List<String[]> Time(String fileName){
-		List<String[]> timeList = new ArrayList<String[]>();
+	public List<List<String>> Time(String fileName){
+		List<List<String>> timeList = new ArrayList<List<String>>();
 		FileReader fr = null;
 		BufferedReader br = null;
 		//映画上映時刻読込(上映回数が5未満の場合はtextに0を入れる)
@@ -47,8 +47,12 @@ public class ReadText {
 			 
 			        String line;
 			        while ((line = br.readLine()) != null) {
+			        	List<String> timeArray = new ArrayList<String>();
 			        	String[] time = line.split(",",0); //カンマ区切り
-			        	timeList.add(time);
+			        	for(int i=0; i<time.length; i++) {
+			        		timeArray.add(time[i]);
+			        	}
+			        	timeList.add(timeArray);
 			        }
 			    } catch (FileNotFoundException e) {
 			        e.printStackTrace();

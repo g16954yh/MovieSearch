@@ -46,9 +46,9 @@ public class TitleSearch extends HttpServlet {
 		Title t = new Title();
 		ReadText rt = new ReadText();
 		List<String> titleList = new ArrayList<String>();
-		List<String[]> timeList = new ArrayList<String[]>();
+		List<List<String>> timeList = new ArrayList<List<String>>();
 		List<List<String>> result = new ArrayList<List<String>> ();
-		String[] timeValue;
+		String[] timeValue; //checkboxの値の配列
 		List<String> value = new ArrayList<String>();
 		
 		//text読み込み

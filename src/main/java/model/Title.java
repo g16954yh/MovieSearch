@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Title {
 
-	public List<String> search(String time1, List<String> titleList, List<String[]> timeList) {
+	public List<String> search(String time1, List<String> titleList, List<List<String>> timeList) {
 		List<String> result = new ArrayList<String>();
 		List<String> first = new ArrayList<String>();
 		List<String> second = new ArrayList<String>();
@@ -16,13 +16,13 @@ public class Title {
 		
 		//timeListから検索する時間帯の前半1時間を探す
 		for(int i=0; i<timeList.size(); i++) {
-			String[] s = timeList.get(i);
-			for(int j=0; j<s.length; j++) {
-				if(!s[j].equals("0")) {
-					String hour = s[j].substring(0, 2); //先頭2文字切り取り(時間帯を取得)
+			List<String> s = timeList.get(i);
+			for(int j=0; j<s.size(); j++) {
+				if(!s.get(j).equals("0")) {
+					String hour = s.get(j).substring(0, 2); //先頭2文字切り取り(時間帯を取得)
 					if(hour.equals(time1)) {
 						//時間とタイトルをListに入れる
-						first.add(s[j]);
+						first.add(s.get(j));
 						first.add(titleList.get(i));
 					}
 				}
@@ -31,13 +31,13 @@ public class Title {
 		
 		//timeListから検索する時間帯の後半1時間を探す
 		for(int i=0; i<timeList.size(); i++) {
-			String[] s = timeList.get(i);
-			for(int j=0; j<s.length; j++) {
-				if(!s[j].equals("0")) {
-					String hour = s[j].substring(0, 2); //先頭2文字切り取り(時間帯を取得)
+			List<String> s = timeList.get(i);
+			for(int j=0; j<s.size(); j++) {
+				if(!s.get(j).equals("0")) {
+					String hour = s.get(j).substring(0, 2); //先頭2文字切り取り(時間帯を取得)
 					if(hour.equals(time2)) {
 						//タイトルと時間をListに入れる
-						second.add(s[j]);
+						second.add(s.get(j));
 						second.add(titleList.get(i));
 					}
 				}

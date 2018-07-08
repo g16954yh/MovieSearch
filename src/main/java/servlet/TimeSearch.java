@@ -46,7 +46,7 @@ public class TimeSearch extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		ReadText rt = new ReadText();
 		List<String> titleList = new ArrayList<String>();
-		List<String[]> timeList = new ArrayList<String[]>();
+		List<List<String>> timeList = new ArrayList<List<String>>();
 		List<String> result = new ArrayList<String>();
 		
 		titleList = rt.Title("WEB-INF/MovieList.txt");
@@ -55,9 +55,9 @@ public class TimeSearch extends HttpServlet {
 		String selectValue = request.getParameter("movie");
 		int value = Integer.parseInt(selectValue);
 		result.add(titleList.get(value));//結果のリストの先頭にはタイトルを入れる
-		String[] time = timeList.get(value);
-		for(int i=0; i<time.length;i++) {
-			if(!time[i].equals("0")) result.add(time[i]);
+		List<String> time = timeList.get(value);
+		for(int i=0; i<time.size(); i++) {
+			if(!time.get(i).equals("0")) result.add(time.get(i));
 		}
 		
 		request.setAttribute("result",result);

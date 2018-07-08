@@ -40,7 +40,7 @@ public class Top extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		ReadText rt = new ReadText();
 		List<String> titleList = new ArrayList<String>();
-		List<String[]> timeList = new ArrayList<String[]>();
+		List<List<String>> timeList = new ArrayList<List<String>>();
 		
 		titleList = rt.Title("WEB-INF/MovieList.txt");
 		timeList = rt.Time("WEB-INF/TimeList.txt");
