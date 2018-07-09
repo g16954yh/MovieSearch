@@ -31,6 +31,24 @@ List<String> result = (List<String>)request.getAttribute("result");
 		left: 0px;
 		margin: auto;
 	}
+	a{
+		display: inline-block;
+    	padding: 0.3em 1em;
+    	text-decoration: none;
+    	color: white;
+    	border: solid 3px black;
+    	border-radius: 12px;
+    	transition: .4s;
+    	background: black;
+    	font-family: Microsoft Sans Serif;
+    	font-size: 14px;
+    	
+	}
+	a:hover{
+		background: white;
+    	color: black;
+	}
+	
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>時間検索結果</title>
@@ -44,6 +62,10 @@ List<String> result = (List<String>)request.getAttribute("result");
 	<h3><%= result.get(i) %>-</h3>
 	<br>
 <% } %>
+  
+<ceter><p>
+<a href="/Top">再検索</a></p></ceter>
+  
  </div>
 </div>
 </body>

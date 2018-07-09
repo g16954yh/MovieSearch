@@ -21,6 +21,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<font color="red">
+<center>
+<h2>! ERROR !</h2>
+</center>
+</font>
+<center>
 <h3>検索する時間を選択してください</h3>
 </body>
+</center>
+<center><p><a href="/Top">ホームへ</a></p></center>
 </html>
