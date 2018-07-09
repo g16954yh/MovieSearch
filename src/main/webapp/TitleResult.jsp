@@ -21,6 +21,7 @@ h2{
 	display: inline-block;
     text-align: left;	
 }
+  
 a{
 		display: inline-block;
     	padding: 0.3em 1em;
@@ -38,7 +39,7 @@ a{
 		background: white;
     	color: black;
 	}
-	
+  
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>作品検索結果</title>
@@ -59,6 +60,8 @@ a{
 	<% } %>
 <% } %>
 </div>
+  
 <ceter><p><a href="/Top">再検索</a></p></ceter>
+  
 </body>
 </html>

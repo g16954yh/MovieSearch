@@ -62,8 +62,10 @@ List<String> result = (List<String>)request.getAttribute("result");
 	<h3><%= result.get(i) %>-</h3>
 	<br>
 <% } %>
+  
 <ceter><p>
 <a href="/Top">再検索</a></p></ceter>
+  
  </div>
 </div>
 </body>
